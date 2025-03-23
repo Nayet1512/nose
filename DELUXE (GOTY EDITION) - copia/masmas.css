@@ -1,0 +1,289 @@
+
+
+/* Contenedor del formulario */
+form {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 500px; /* Más ancho */
+    padding-bottom: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Imagen diagonal superior */
+.form-header {
+    position: relative;
+    height: 220px; /* Más alto */
+    background: url('img/fondo.webp') no-repeat center center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+/* Círculo en el centro de la diagonal */
+.circle {
+    position: absolute;
+    top: 40%; /* Ajustado para que esté más arriba */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: #d19a6e; /* Marrón claro */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Asegura que quede encima de todo */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.circle:hover {
+    transform: translate(-50%, -10px);
+    background: #c27d54;
+}
+
+/* Campos del formulario */
+form input {
+    width: calc(100% - 60px);
+    margin: 15px 30px;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px; /* Texto más grande */
+    text-align: center; /* Centrar el texto */
+    color: #555; /* Texto más claro */
+    background-color: #f8f5f2; /* Fondo claro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #d19a6e; /* Marrón claro */
+    box-shadow: 0 0 8px rgba(209, 154, 110, 0.5);
+}
+
+/* Botón principal */
+form button {
+    background-color: #d19a6e; /* Marrón claro */
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Texto más grande */
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    width: calc(100% - 60px);
+    margin: 20px 30px;
+}
+
+form button:hover {
+    background-color: #c27d54; /* Marrón más oscuro */
+    transform: translateY(-5px); /* Sutil levantamiento */
+}
+
+/* Enlaces */
+form a {
+    color: #d19a6e; /* Marrón claro */
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: block; /* Centrar como bloque */
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #c27d54; /* Marrón más oscuro */
+    text-decoration: underline;
+}
+
+/* Mensajes de error o éxito */
+form p {
+    font-size: 16px;
+    color: #c27d54; /* Marrón oscuro */
+    margin: 10px 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Container */
+.crud-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff8f0;
+    border: 1px solid #dab89f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    background-color: #8c6239;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #734d2b;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dab89f;
+}
+
+th {
+    background-color: #a67c52;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f7e4d9;
+}
+
+tr:nth-child(odd) {
+    background-color: #fdf9f4;
+}
+
+td a {
+    text-decoration: none;
+    color: #8c6239;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+td a:hover {
+    color: #734d2b;
+    text-decoration: underline;
+}
+
+/* Active/Inactive Status */
+td:nth-child(5) {
+    font-weight: bold;
+    color: #734d2b;
+}
+
+td:nth-child(5):before {
+    content: "• ";
+    color: #5d3c1c;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .crud-container {
+        width: 95%;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        font-size: 0.85rem;
+    }
+}
+
+#editar-modal {
+    position: fixed; /* Mantiene el modal en una posición fija */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste final para asegurar el centrado */
+    background-color: white;
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+    display: none; /* Se mantiene oculto inicialmente */
+   
+
+}
+/* Estilo común para los botones de acción */
+.action-btn {
+    background-color: #a67c52; /* Café claro */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor en forma de mano */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto al pasar el ratón */
+    width: 140px; /* Asegura que ambos botones tengan el mismo tamaño */
+    margin-right: 10px; /* Espacio entre los botones */
+    background: #a67c52; /* Reafirmamos el fondo para evitar problemas */
+}
+
+/* Eliminar cualquier borde o fondo del formulario para los botones */
+form button {
+    background-color: #a67c52; /* Café claro */
+    border: none; /* Sin borde */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 140px;
+    margin-right: 10px;
+    background: #a67c52 !important; /* Asegura que el fondo no cambie */
+    box-shadow: none !important; /* Elimina sombras */
+    outline: none; /* Elimina el borde de enfoque (outline) */
+}
+
+/* El botón Activar/Desactivar */
+button:hover {
+    background-color: #8e6b47; /* Cambio de color al pasar el ratón */
+}
+
+button:active {
+    background-color: #6e4b33; /* Café más oscuro al hacer clic */
+}
+
+/* Contenedor de botones, para alinear en fila */
+.button-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Deja espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo específico para los formularios dentro de la tabla */
+form {
+    margin: 0; /* Elimina márgenes predeterminados */
+    display: inline-block; /* Asegura que los botones estén uno al lado del otro */
+}
+/* Modal común para agregar y editar usuario */
+
+
+#agregar-modal {
+    position: fixed; /* Mantiene el modal en una posición fija */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste final para asegurar el centrado */
+    background-color: white;
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+    display: none; /* Se mantiene oculto inicialmente */
+}

@@ -1,0 +1,235 @@
+body {
+    font-family: system-ui;
+}
+
+.container {
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+
+.header-section div {
+    position: 100px;
+}
+
+.header-section p {
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: #D8B29A; /* Café claro */
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
+
+.cart {
+    width: 39px;
+    height: 38px;
+}
+
+.cart-products {
+    position: fixed; /* Mantiene el carrito fijo en la pantalla */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que quede perfectamente centrado */
+    background-color: #fff;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    display: none;
+    max-width: 90%; /* Máximo ancho, se ajusta con respecto a la pantalla */
+    max-height: 80%; /* Máxima altura */
+    overflow-y: auto; /* Permite el scroll si los productos se exceden de la altura */
+    border-radius: 8px; /* Opcional, para bordes redondeados */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+
+.cart:hover {
+    margin-bottom: 16px;
+    transition-duration: .5s;
+}
+
+.products {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.carts {
+    max-width: 500px;
+    
+    padding-bottom: 34px;
+    margin-bottom: 40px;
+}
+
+.carts img {
+    width: 100%;
+}
+
+.carts p {
+    font-family: system-ui;
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+
+.carts div p {
+    position: absolute;
+    top: 22px;
+    right: 0px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 2px 7px 4px 21px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.carts div {
+    position: relative;
+}
+
+.carts a {
+    font-family: system-ui, sans-serif;
+    text-decoration: none;
+    background: #D8B29A; /* Café claro */
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: inline-block;
+    transition: all 0.3s ease-in-out; /* Transición más fluida */
+}
+
+.carts a:hover {
+    background: #fff;
+    color: #D8B29A; /* Café claro */
+    border: solid 2px #D8B29A;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Más sombra al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de "flotar" */
+}
+
+
+/*float cart*/
+.cart-products .item img {
+    width: 115px;
+}
+
+.cart-products .item {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #D8B29A; /* Café claro */
+}
+
+.cart-products .item .item-content {
+    margin: 0 19px;
+    width: 201px;
+}
+
+.cart-products .item .item-content h5 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+
+.cart-products .item .item-content h6 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+
+.cart-products .item span {
+    background-color: #D8B29A; /* Café claro */
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: system-ui;
+    cursor: pointer;
+}
+
+.cart-products h3 {
+    margin-bottom: 0;
+}
+
+.cart-products .item .item-content h5.cart-price {
+    font-weight: 1000;
+}
+
+/*style to btn close*/
+p.close-btn {
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: #000;
+}
+
+p.author {
+    display: flex;
+    justify-content: center;
+    FONT-VARIANT: 000000;
+    margin-top: 3%;
+    gap: 7px;
+}
+
+p.author a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+
+
+.fondo {
+    background-color: #e2b497;
+    ; /* Color de fondo (puedes cambiarlo por el color que desees) */
+    height: 100%; /* Hace que la sección ocupe toda la altura de la pantalla */
+}
+.custom-title {
+    font-family: 'Poppins', sans-serif;
+    /* Tipografía moderna */
+    font-size: 2.5rem;
+    /* Tamaño del texto */
+    color: #D8B29A;
+    /* Color café claro */
+    text-align: center;
+    /* Centrar el texto */
+    text-transform: uppercase;
+    /* Convertir a mayúsculas */
+    letter-spacing: 3px;
+    /* Espaciado entre letras */
+    font-weight: 700;
+    /* Negrita */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    /* Posicionamiento para decoraciones adicionales */
+}
+
+.custom-title::after {
+    content: '';
+    width: 80px;
+    /* Ancho de la línea */
+    height: 4px;
+    /* Grosor de la línea */
+    background: #D8B29A;
+    /* Mismo color que el texto */
+    display: block;
+    margin: 10px auto 0;
+    /* Centrar debajo del texto */
+    border-radius: 2px;
+    /* Bordes redondeados en la línea */
+}
